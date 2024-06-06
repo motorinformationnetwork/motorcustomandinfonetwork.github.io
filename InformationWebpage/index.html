@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+        <!---- titile -->
+        <title>Motor Custom and Info Network - Create your dream cars</title>
+        <!--- customer css file ----->
+           
+        <link rel="stylesheet" href="CSS\style.css">
+        <!--- boxicon cdn link ----->
+        <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+        <link href="https://blogfonts.com/css/aWQ9MTUxNTEzJnN1Yj01MTMmYz1mJnR0Zj1Gb3JtdWxhMS1Cb2xkX3dlYl8wLnR0ZiZuPWZvcm11bGExLWRpc3BsYXktYm9sZA/Formula1 Display Bold.ttf" rel="stylesheet" type="text/css"/>
+        <title>Remove Bullets</title>
+
+    <div class="title">
+        
+    </div>
+        <link rel="stylesheet" href="style.css">
+        
+    </head>
+    
+<body>
+
+        <!--- navbar section start --->
+        
+        <header class="header">
+            <div class="logo">
+                <img src="imgvids/Project Logo (1).png" alt="">
+            </div>
+            <nav>
+                <div class="navbar">
+                    <ul class="navbarlinks">
+                            <li><a href="#" class="active">Home</a></li>
+                            <li><a href="#">Customize</a></li>
+                            <li><a href="#">Information</a></li>
+                            <li><a href="#">News</a></li>
+                            <li><a href="#">About us</a></li>
+                    </ul>
+                </div>
+                <div class="others">
+                    <i class='bx bx-search' ></i> 
+                    <i class='bx bxs-download cart'></i> 
+                    <button class="addBtn"><i class='bx bxs-user-circle'></i></i>Login / Register</button>  
+                    <i class='bx bx-menu-alt-left' id="menuBtn"></i>
+                </div>
+            </nav>    
+        </header>
+    
+
+    <div class="image">
+        
+    </div>
+        <div class="sec1">
+            <div class="name">
+                <h1>Ferrari SF90 Stradale</h1>
+            </div>
+
+            <div class="history">
+                <h3>The Ferrari SF90 Stradale, unveiled in 2019, is a high-performance plug-in hybrid sports car produced by the Italian manufacturer Ferrari. Named to celebrate the 90th anniversary of Scuderia Ferrari and the launch of the team's 2019 Formula 1 car, the SF90 Stradale represents a significant advancement in Ferrari's technological capabilities, incorporating advanced hybrid technology derived from Formula 1.</h3>
+            </div>
+            
+        </div>
+
+     
+
+    <div class="information">
+        
+        <div class="specstitle">
+            <h1>Specifications</h1>
+        </div>
+
+        
+        <div class="specsbox">
+            <div class="specs">
+                <img src="imgvids/images-removebg-preview.png">
+                <H2>4.0-liter twin-turbocharged V8 engine</H2>
+            </div>
+           
+
+            <div class="specs">
+                <img src="imgvids\motors.png">
+                <H2>Three electric motors</H2>
+            </div>
+            
+
+            <div class="specs">
+                <img src="imgvids/horsepower.png">
+                <H2>986 horsepower</H2>
+            </div>
+
+            <div class="specs">
+                <img src="imgvids/transmission.png">
+                <H2>8-speed dual-clutch automatic transmission</H2>
+            </div>
+          
+            <div class="specs">
+                <img src="imgvids/acceleration.png">
+                <H2>0-60 mph in 2.5 seconds</H2>
+            </div>
+
+            <div class="specs">
+                <img src="imgvids/speed.png">
+                <H2>Top speed of 211mph</H2>
+            </div>
+
+            <div class="specs">
+                <img src="imgvids/battery.png">
+                <H2>7.9 kWh lithium-ion battery pack</H2>
+            </div>
+
+            <div class="specs">
+                <img src="imgvids/electric.png">
+                <H2>Electric range of 16 miles</H2>
+            </div>
+
+            <div class="specs">
+                <img src="imgvids/weight.png">
+                <H2>Curb weight 3461 lbs</H2>
+            </div>
+
+            <div class="specs">
+                <img src="imgvids/torque.png">
+                <H2>Torque 590lb-ft from V8 engine</H2>
+            </div>
+
+        </div>
+
+    </div>
+            
+        <div class="galsec">
+            <div class="galtitle">
+                <h1>Gallery</h1>
+            </div>
+            <div class="gallery">
+                <img src="imgvids\SF90-Stradale-Black.png" width="100%">
+            </div>
+
+            <div class="gallery">
+                <img src="imgvids\SF90-Stradale-Blue.png" width="100%">
+            </div>
+
+            <div class="gallery">
+                <img src="imgvids\SF90-Stradale-Grey.png" width="100%">
+            </div>
+        </div>  
+
+
+        <div class="videosec">
+            <div class="title3">
+                <h1>Ferrari SF90 Stradale Showcase</h1>
+            </div>
+            <div class="video">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/2xbg44TCiww" frameborder="0"></iframe> 
+            </div>
+
+        </div>
+
+               
+        <div class="commentstitle">
+            <h1>Comments</h1>
+            <html lang="en" data-theme="light">
+        
+
+        
+            <section id="app">
+                <div class="container">
+                  <div class="row">
+                    <div class="col-6">
+                      <div class="comment">
+                    <p v-for="items in item" v-text="items"></p>
+                      </div><!--End Comment-->
+                      </div><!--End col -->
+                      </div><!-- End row -->
+                  <div class="row">
+                    <div class="col-6">
+                  <textarea type="text" class="input" placeholder="Write a comment" v-model="newItem" @keyup.enter="addItem()"></textarea>
+                      <button v-on:click="addItem()" class='primaryContained float-right' type="submit">Add Comment</button>
+                    </div><!-- End col -->
+                  </div><!--End Row -->
+                </div><!--End Container -->
+              </section><!-- end App -->
+
+              
+        <script type="module" src="scripts/index.js"></script>
+</body>
+</html>
