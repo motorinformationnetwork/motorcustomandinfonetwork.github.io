@@ -1,0 +1,766 @@
+@font-face {
+    font-family: Formula1;
+    src: url(../fontlg/Formula1-Bold_web_1.ttf);
+}
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    list-style: none;
+    scroll-behavior: smooth;
+}
+
+html{
+    font-size: 65.5%;
+}
+
+
+:root{
+    --text-color:black;
+    --main-color: rgb(71, 71, 161);
+}
+
+body{
+  overflow-x: hidden;
+}
+
+
+.header {
+  width: 100%;
+  height: 125px;
+  left: 0;
+  top: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.5rem 9.5%;
+  z-index: 111;
+  transition: 0.4s ease;
+  font-family: Formula1;
+  position: relative;
+}
+
+.header.sticky{
+  padding: 15rex 9.5%;
+}
+
+.header .logo img {
+  width: 200px;
+  position: relative;
+  transition: 0.4s;
+}
+
+.header nav{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-right: 10%;
+  padding-left: 10%;
+}
+
+nav .navbar .navbarlinks{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10rem;
+  left: -6%;
+  position: relative;
+  transition: 0.4s;
+}
+
+nav .navbar .navbarlinks li a {
+  font-size: 1.7rem;
+  color: white;
+  font-weight: 600;
+  position: relative;
+  transition: 0.3s;
+  font-family: Formula1;
+}
+
+nav .navbar .navbarlinks li a::after{
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  height: 4px;
+  width: 100%;
+  left: 0;
+  background-color: rgb(200, 215, 255);
+  transition: 0.3s;
+  transition-timing-function: ease-in-out;
+  transform: scaleX(0);
+}
+
+nav .navbar .navbarlinks li a:hover::after{
+  transform: scaleX(1);
+}
+
+nav .navbar .navbarlinks li a:hover{
+  color: rgb(255, 176, 176);
+}
+
+nav .others #menuBtn {
+  display: none;
+}
+
+
+nav .others {
+  display: flex;
+  align-items: center;
+  left: 5%;
+  position: relative;
+  transition: 0.4s;
+}
+
+nav .others i{
+  font-size: 2.0rem;
+  color: white;
+  cursor: pointer;
+  transition: 0.4s;
+}
+
+nav .others i:hover{
+  color: darkgray;
+  
+}
+
+nav .others .addBtn i{
+  color: black;
+}
+
+nav .others .addBtn{
+  position: relative;
+  color: black;
+  background: white;
+  padding: 1.5rem 1.7rem;
+  font-size: 1.2rem;
+  left: 30%;
+  border-radius: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  font-family: Formula1;
+  transition: 0.4s;
+}
+
+nav .others .addBtn:hover{
+  background: lightsalmon;
+  color: black;
+}
+
+
+@media(max-width:1200px){
+  nav .navbar ul li{
+      padding: 2.5rem 0;
+  }
+
+  nav .others{
+      gap: 1rem;
+  }
+
+  nav .navbar .navbarlinks{
+      gap: 0.5rem;
+  }
+}
+
+@media(max-width:1300px){
+  nav .others .addBtn{
+      display: none;
+  }
+}
+
+@media(max-width:1700px){
+  .right-links{
+      margin-left: -7%;
+      position: relative;
+  }
+
+  nav .navbar .navbarlinks{
+      left: -20%;
+      position: relative;
+  }
+}
+
+@media(max-width:1700px){
+  .fun:hover input{
+      width: 50px;
+      
+  }
+}
+
+@media(max-width:1200px){
+  nav .navbar .navbarlinks{
+      position: absolute;
+      top: 12rem;
+      display: block;
+      left: 0px;
+      padding-left: 40%;
+      padding-right: 40%;
+      width: 100%;
+      transition: 0.5s ease-in-out;
+      display: none;
+      background-color: rgb(255, 255, 255);  
+      box-shadow: 0 0 5px rgba(255, 255, 255, 0.5), 0 0 10px rgba(248, 247, 247, 0.5);
+  }
+
+  nav .others .addBtn{
+      display: block;
+      left: 30%;
+      position: relative;
+      transition: 0.4s;
+  }
+
+  nav .navbar .navbarlinks.active{
+      display: block;
+      transition: 0.5s ease-in-out;
+      font-family: Formula1;
+  }
+
+  .right-links{
+      margin-right: 32%;
+      margin-top: 0.7%;
+      position: relative;
+  }
+  
+
+  nav .others #menuBtn {
+      display: block;
+      color: rgb(0, 0, 0);
+      transition: 0.4s;
+      margin-left: 1700%;
+     
+  }
+
+  nav .others #menuBtn:hover{
+      color: lightsalmon;
+  }
+
+  nav .navbar .navbarlinks li a {
+      text-align: center;
+      display: flex;
+      transition: 0.5s ease-in-out;
+      justify-content: center;
+      color: rgb(0, 0, 0);
+  }
+
+  .header{
+      background-color: rgb(150, 150, 150);
+      box-shadow: 0 0 5px rgba(190, 190, 190, 0.5), 0 0 10px rgba(190, 190, 190, 0.5);
+      max-width: 100%;
+      animation:ease-in-out;
+  }
+
+}
+
+
+@media(max-width:1700px){
+  .header .logo img {
+       width: 170px;
+       left: -50%;
+       position: relative;
+  }
+}
+
+
+
+@media(max-width:1300px){
+  nav .others i.cart{
+      display: none;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+  }
+}
+
+@media(max-width:1420px){
+  .fun:hover input{
+      width: 100px;
+      
+  }
+}
+
+@media(max-width:1300px){
+  .fun:hover input{
+      width: 50px;
+      
+  }
+
+  .fun{
+      right: 20px;
+      position: relative;
+  }
+}
+
+
+@media(max-width:1200px){
+  .fun:hover input{
+      width: 200px;
+      
+  }
+  
+}
+
+@media(max-width:1200px){
+  nav .others #menuBtn {
+      right: -50px;
+      position: relative;
+      transition: 0.4s;
+}
+
+.fun{
+  right: -50px;
+  position: relative;
+}
+}
+
+
+
+@media(max-width:700px){
+  .fun:hover input{
+     width: 100px;
+  }
+  
+}
+
+@media(max-width:600px){
+  .fun:hover input{
+     width: 50px;
+  }
+
+  .fun{
+      right: 10px;
+      position: relative;
+  }
+
+  nav .others .addBtn{
+      left: -35%;
+      width: 150px;
+      position: relative;
+  }
+ 
+}
+
+.content .main-box.top .top .box{
+  font-size: 29px;
+  margin-top: -5%;
+  margin-bottom: 6%;
+  position: relative;
+}
+
+.content .main-box.top .top .box b{
+  font-family: Formula1;
+  color: rgb(0, 247, 255);
+}
+
+.content .main-box.top .top .box p{
+  font-family: Formula1;
+  color: rgb(0, 247, 255);
+}
+
+.btn {
+  width: 100%;
+  height: 45px;
+  background: #162938;
+  border: none;
+  outline: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 1em;
+  color: #fff;
+  font-weight: 500;
+  font-size: 2rem;
+  font-family: 'Formula1';
+  font-weight: bold;
+}
+
+.btn:hover {
+  color: black;
+  background: rgb(13, 211, 247);
+}
+
+.right-links{
+  display: flex;
+  padding-left: 0%;
+  transition: 0.4s;
+}
+
+.right-links button{
+  width: 100px;
+  height: 50px;
+  bottom: 20%;
+  position: relative;
+  transition: 0.4s;
+}
+
+.right-links .btn{
+  font-size: 15px;
+  transition: 0.4s;
+}
+
+.right-links .pro{
+  color: rgb(255, 255, 255);
+  font-size: 15px;
+  font-family: Formula1;
+  margin-top: 20px;
+  margin-left: -70%;
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+  display: flex;
+  white-space: nowrap;
+  transition: 0.4s;
+}
+
+.right-links a{
+  padding: 0% 5%;
+  color: rgb(255, 255, 255);
+  font-family: Formula1;
+  transition: 0.4s;
+}
+
+.right-links a:hover{
+  color: rgb(166, 166, 240);
+  transition: 0.4s;
+}
+
+@media(max-width:1470px){
+  .right-links{
+      left: 50%;
+      position: relative;
+  }
+
+  nav .navbar .navbarlinks{
+      margin-right: -16%;
+     
+  }
+}
+
+@media(max-width:1150px){
+.right-links{
+  margin-right: 40%;
+  margin-top: 0.7%;
+  position: relative;
+}
+
+
+nav .others #menuBtn {
+  display: block;
+  color: rgb(0, 0, 0);
+  transition: 0.4s;
+  margin-left: 1200%;
+ 
+}
+
+}
+
+@media(max-width:1050px){
+  .right-links{
+      margin-right: 40%;
+      margin-top: 0.7%;
+      position: relative;
+  }
+  
+  
+  nav .others #menuBtn {
+      display: block;
+      color: rgb(0, 0, 0);
+      transition: 0.4s;
+      margin-left: 1000%;
+     
+  }
+  
+  }
+
+@media(max-width:950px){
+  
+  nav .others #menuBtn {
+      display: block;
+      color: rgb(0, 0, 0);
+      transition: 0.4s;
+      margin-left: 800%;
+             
+  }
+          
+}
+
+@media(max-width:850px){
+  .right-links{
+      left: 42%;
+      margin-top: 0.7%;
+      position: relative;
+  }
+          
+          
+  nav .others #menuBtn {
+      display: block;
+      color: rgb(0, 0, 0);
+      transition: 0.4s;
+      margin-left: 300%;
+             
+  }
+          
+}
+
+@media(max-width:730px){
+  .right-links{
+      left: 30%;
+      margin-top: 0.7%;
+      position: relative;
+  }
+          
+          
+  nav .others #menuBtn {
+      right: 200%;
+      position: relative;
+      transition: 0.4s;
+  }
+          
+}
+
+@media(max-width:620px){
+  .right-links{
+      left: 20%;
+      margin-top: 0.7%;
+      position: relative;
+  }
+          
+          
+  nav .others #menuBtn {
+      right: 500%;
+      position: relative;
+      transition: 0.4s;
+  }
+
+  .logo img{
+      padding-left: 10%;
+  }
+          
+}
+
+@media(max-width:520px){
+  .right-links{
+      left: 10%;
+      margin-top: 0.7%;
+      position: relative;
+  }
+          
+          
+  nav .others #menuBtn {
+      right: 750%;
+      position: relative;
+      transition: 0.4s;
+  }
+
+  .logo img{
+      padding-left: 10%;
+  }
+          
+}
+
+
+  .wrapper .form-box {
+    width: 100%;
+    padding: 40px;
+  }
+
+  
+  .form-box h2 {
+    font-size: 2.5rem;
+    color: white;
+    text-align: center;
+    font-family: Formula1;
+  }
+
+  .input-box {
+    position: relative;
+    width: 100%;
+    height: 50px;
+    border-bottom: 2px solid white;
+    margin: 30px 0;
+  }
+
+  .input-box label {
+    position: absolute;
+    top: 20%;
+    left: 5px;
+    transform: translateY(-50%);
+    font-size: 1.5rem;
+    font-weight: 500;
+    pointer-events: none;
+    transition: 0.5s;
+    color: white;
+    font-family: Formula1;
+    
+  }
+  
+
+  .input-box input {
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    border: none;
+    outline: none;
+    font-size: 1.25rem;
+    color: white;
+    font-weight: 600;
+    padding: 15px 35px 0 5px;
+  }
+
+  .input-box .icon {
+    position: absolute;
+    right: 8px;
+    font-size: 1.5em;
+    color: white;
+    line-height: 57px;
+    padding-top: 1.5%;
+  }
+
+  .remember-forgot {
+    font-size: 1.55rem;
+    color: white;
+    font-weight: 500;
+    margin: -15px 0 15px;
+    display: flex;
+    justify-content: space-between;
+
+  }
+
+  .remember-forgot label input{
+    accent-color: white;
+    margin-right: 3px;
+  }
+
+  .remember-forgot a {
+    color: white;
+    text-decoration: underline;
+    font-size: 1.55rem;
+  }
+
+  
+
+  .login-register {
+    font-size: 1.5rem;
+    color: white;
+    text-align: center;
+    font-weight: 500;
+    margin: 25px 0 10px;
+    font-family: Formula1;
+  }
+
+  .login-register p a {
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.55rem;
+    font-family: Formula1;
+  }
+
+  .login-register p a:hover{
+    text-decoration: underline;
+
+  }
+
+  .wrapper2 {
+    position: relative;
+    width: 24%;
+    min-height: 100%;
+    max-height: 100%;
+    margin-left: 38.5%;
+    margin-right: 38.5%;
+    margin-top: 8%;
+    background: transparent;
+    border: 2px solid rgba(255, 255, 255, .5);
+    border-radius: 20px;
+    backdrop-filter: blur(20px);
+    box-shadow: 0 0 30px rgba(0, 0, 0, .5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Formula1;
+  }
+
+  @media(max-width:1280px){
+    .wrapper2{
+      width: 30%;
+      margin-left: 35.5%;
+      position: relative;
+    }
+  }
+
+  @media(max-width:1020px){
+    .wrapper2{
+      width: 40%;
+      margin-left: 30.5%;
+      position: relative;
+    }
+  }
+
+  @media(max-width:760px){
+    .wrapper2{
+      width: 50%;
+      margin-left: 25.5%;
+      position: relative;
+    }
+  }
+
+  @media(max-width:610px){
+    .wrapper2{
+      width: 60%;
+      margin-left: 20.5%;
+      position: relative;
+      margin-top: 10%;
+    }
+  }
+
+  @media(max-width:520px){
+    .wrapper2{
+      width: 65%;
+      margin-left: 18.5%;
+      position: relative;
+      margin-top: 10%;
+    }
+  }
+
+
+  .wrapper2 .form-box {
+    width: 100%;
+    padding: 40px;
+  }
+
+  .message{
+    text-align: center;
+    background: #f9eded;
+    padding-bottom: 80px;
+    padding-top: 50px;
+    padding-left: 5%;
+    padding-right: 5%;
+    bottom: 50px;
+    border: 1px solid #699053;
+    border-radius: 10px;
+    margin-bottom: 0px;
+    margin-top: 15%;
+    margin-left: 25%;
+    color: red;
+    width: 50%;
+    font-family: Formula1;
+    font-size: 20px;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .message button.btn{
+    width:50%;
+    font-family:Formula1; 
+    margin-top: 5%;
+  }
+
+  @media(max-width:700px){
+  .message button.btn{
+    width:70%;
+    font-family:Formula1; 
+    margin-top: 5%;
+  }
+}
+
+  

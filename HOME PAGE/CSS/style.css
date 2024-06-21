@@ -1,0 +1,1141 @@
+/*=== navbar section start ===*/
+@font-face {
+    font-family: Formula1;
+    src: url(../Font/Formula1-Bold_web_0.ttf);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    list-style: none;
+    scroll-behavior: smooth;
+    font-family: 'times new roman';
+
+}
+
+html{
+    font-size: 65.5%;
+}
+
+
+:root{
+    --text-color:black;
+    --main-color: rgb(71, 71, 161);
+}
+
+body{
+    overflow-x: hidden;
+}
+
+.header {
+    width: 100%;
+    height: 125px;
+    left: 0;
+    top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.5rem 9.5%;
+    z-index: 111;
+    transition: 0.4s ease;
+    font-family: Formula1;
+    position: relative;
+}
+
+.header.sticky{
+    padding: 15rex 9.5%;
+}
+
+.header .logo img {
+    width: 200px;
+    position: relative;
+    transition: 0.4s;
+}
+
+.header nav{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-right: 10%;
+    padding-left: 10%;
+}
+
+nav .navbar .navbarlinks{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10rem;
+    left: -6%;
+    position: relative;
+    transition: 0.4s;
+}
+
+nav .navbar .navbarlinks li a {
+    font-size: 1.7rem;
+    color: white;
+    font-weight: 600;
+    position: relative;
+    transition: 0.3s;
+    font-family: Formula1;
+}
+
+nav .navbar .navbarlinks li a::after{
+    content: "";
+    position: absolute;
+    bottom: -5px;
+    height: 4px;
+    width: 100%;
+    left: 0;
+    background-color: rgb(200, 215, 255);
+    transition: 0.3s;
+    transition-timing-function: ease-in-out;
+    transform: scaleX(0);
+}
+
+nav .navbar .navbarlinks li a:hover::after{
+    transform: scaleX(1);
+}
+
+nav .navbar .navbarlinks li a:hover{
+    color: rgb(255, 176, 176);
+}
+
+nav .others #menuBtn {
+    display: none;
+}
+
+
+nav .others {
+    display: flex;
+    align-items: center;
+    left: 5%;
+    position: relative;
+    transition: 0.4s;
+}
+
+nav .others i{
+    font-size: 2.0rem;
+    color: white;
+    cursor: pointer;
+    transition: 0.4s;
+}
+
+nav .others i:hover{
+    color: darkgray;
+    
+}
+
+nav .others .addBtn i{
+    color: black;
+}
+
+nav .others .addBtn{
+    position: relative;
+    color: black;
+    background: white;
+    padding: 1.5rem 1.7rem;
+    font-size: 1.2rem;
+    left: 0%;
+    border-radius: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    font-family: Formula1;
+    transition: 0.4s;
+    width: 150%;
+    display: flex;
+}
+
+nav .others .addBtn:hover{
+    background: lightsalmon;
+    color: black;
+}
+
+
+@media(max-width:1200px){
+    nav .navbar ul li{
+        padding: 2.5rem 0;
+    }
+
+    nav .others{
+        gap: 1rem;
+    }
+
+    nav .navbar .navbarlinks{
+        gap: 0.5rem;
+    }
+}
+
+@media(max-width:1300px){
+    nav .others .addBtn{
+        display: none;
+    }
+}
+
+@media(max-width:1600px){
+    nav .others .addBtn{
+        left: -90%;
+        position: relative;
+    }
+  
+    nav .navbar .navbarlinks{
+        left: -15%;
+        gap: 8rem;
+        position: relative;
+    }
+}
+
+@media(max-width:1600px){
+    .fun:hover input{
+        width: 50px;
+        
+    }
+}
+
+@media(max-width:1200px){
+    nav .navbar .navbarlinks{
+        position: absolute;
+        top: 12rem;
+        display: block;
+        left: 0px;
+        padding-left: 40%;
+        padding-right: 40%;
+        width: 100%;
+        transition: 0.5s ease-in-out;
+        display: none;
+        background-color: rgb(255, 255, 255);  
+        box-shadow: 0 0 5px rgba(255, 255, 255, 0.5), 0 0 10px rgba(248, 247, 247, 0.5);
+    }
+  
+    nav .others .addBtn{
+        display: block;
+        left: 30%;
+        position: relative;
+        transition: 0.4s;
+        width: 100%;
+    }
+  
+    nav .navbar .navbarlinks.active{
+        display: block;
+        transition: 0.5s ease-in-out;
+        font-family: Formula1;
+    }
+    
+  
+    nav .others #menuBtn {
+        display: block;
+        color: rgb(0, 0, 0);
+        transition: 0.4s;
+    }
+  
+    nav .others #menuBtn:hover{
+        color: lightsalmon;
+    }
+  
+    nav .navbar .navbarlinks li a {
+        text-align: center;
+        display: flex;
+        transition: 0.5s ease-in-out;
+        justify-content: center;
+        color: rgb(0, 0, 0);
+    }
+  
+    .header{
+        background-color: rgb(150, 150, 150);
+        box-shadow: 0 0 5px rgba(190, 190, 190, 0.5), 0 0 10px rgba(190, 190, 190, 0.5);
+        max-width: 100%;
+        animation:ease-in-out;
+    }
+
+}
+
+
+@media(max-width:1600px){
+    .header .logo img {
+         width: 170px;
+         left: -30%;
+         position: relative;
+    }
+ }
+
+
+
+@media(max-width:1300px){
+    nav .others i.cart{
+        display: none;
+        opacity: 0;
+        transition: opacity 0.3s ease;
+    }
+}
+
+@media(max-width:1420px){
+    .fun:hover input{
+        width: 100px;
+        
+    }
+}
+
+@media(max-width:1300px){
+    .fun:hover input{
+        width: 50px;
+        
+    }
+
+    .fun{
+        right: 20px;
+        position: relative;
+    }
+}
+
+
+@media(max-width:1200px){
+    .fun:hover input{
+        width: 200px;
+        
+    }
+    
+}
+
+@media(max-width:1200px){
+    nav .others #menuBtn {
+        right: -70px;
+        position: relative;
+        transition: 0.4s;
+}
+
+.fun{
+    right: -50px;
+    position: relative;
+}
+}
+
+
+
+@media(max-width:700px){
+    .fun:hover input{
+       width: 100px;
+    }
+    
+}
+
+@media(max-width:600px){
+    .fun:hover input{
+       width: 50px;
+    }
+  
+    .fun{
+        right: 10px;
+        position: relative;
+    }
+  
+    nav .others #menuBtn {
+        right: -10%;
+        position: relative;
+        transition: 0.4s;
+    }
+  
+    nav .others .addBtn{
+        left: -5%;
+        width: 150px;
+        position: relative;
+    }
+   
+  }
+
+  .btn {
+    width: 100%;
+    height: 45px;
+    background: #162938;
+    border: none;
+    outline: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1em;
+    color: #fff;
+    font-weight: 500;
+    font-size: 2rem;
+    font-family: 'Formula1';
+    font-weight: bold;
+  }
+
+  .btn:hover {
+    color: black;
+    background: rgb(13, 211, 247);
+  }
+
+  .right-links{
+    display: flex;
+    padding-left: 0%;
+    transition: 0.4s;
+  }
+  
+  .right-links button{
+    width: 100px;
+    height: 50px;
+    bottom: 20%;
+    position: relative;
+    transition: 0.4s;
+  }
+  
+  .right-links .btn{
+    font-size: 15px;
+    transition: 0.4s;
+  }
+  
+  .right-links .pro{
+    color: rgb(255, 255, 255);
+    font-size: 15px;
+    font-family: Formula1;
+    margin-top: 20px;
+    margin-left: -40%;
+    text-decoration: underline;
+    text-decoration-thickness: 2px;
+    display: flex;
+    white-space: nowrap;
+    transition: 0.4s;
+  }
+  
+  .right-links a{
+    padding: 0% 5%;
+    color: white;
+    font-family: Formula1;
+    transition: 0.4s;
+  }
+
+  .right-links a:hover{
+    color: black;
+  }
+
+
+/*---home section---*/
+
+.title h1{
+    font-size: 3.2rem;
+    color: white;
+    position: relative;
+    display: flex;
+    top: 50px;
+    font-family: Formula1;
+    text-align: center;
+    text-transform: capitalize;
+    margin-left: 5rem;
+    
+}
+
+@media(max-width:700px){
+    .title h1{
+        margin-right: 50px;
+
+    }
+}
+
+.home .slide{
+    width: 100%;
+    height: 110vh;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    padding: 0 15rem;
+    margin-top: 2%;
+}
+
+.home .slide .col-1{
+    position: relative;
+    padding-left: 1%;
+    padding-right: 1%;
+    bottom: 130px;
+    cursor: pointer;
+
+}
+
+
+.home .slide .col-1 img{
+    height: 100%;
+    width: 100%;
+    background-size: cover;
+    transition: all 1.1s;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px 5px grey;
+}
+
+.home .slide .col-1:hover img{
+    transform: scale(1.05);
+}
+
+.home .slide .col-2{
+    position: absolute;
+    top: 15%;
+    padding: 10px;
+    left: 17%;
+}
+
+.home .slide.slide-one .col-2 h4{
+    color: white;
+    font-size: 5.2rem;
+    text-transform: capitalize;
+}
+
+.home .slide.slide-two .col-2 h4{
+    color: white;
+    font-size: 5.2rem;
+    text-transform: capitalize;
+}
+
+.home .slide.slide-three .col-2 h4{
+    color: white;
+    font-size: 5.2rem;
+    text-transform: capitalize;
+}
+
+.home .slide.slide-one .col-2 h1{
+    color: white;
+}
+
+.home .slide.slide-two .col-2 h1{
+    color: white;
+}
+
+.home .slide.slide-three .col-2 h1{
+    color: white;
+}
+
+.home .swiper [class^="swiper-button-"] {
+    top: 38%;
+    color: grey;
+    padding: 2.5rem;
+}
+
+.box .title h2{
+    font-size: 5rem;
+    color: white;
+    position: relative;
+    display: flex;
+    bottom: 225px;
+    margin-left: 75px;
+    text-transform: capitalize;
+    font-family: Formula1;
+}
+
+@media(max-width:1500px){
+    .box .title h2{
+        font-size: 4rem;
+        text-align: center;
+        right: 4rem;
+    }
+
+
+}
+
+@media(max-width:1500px){
+    .home .slide.slide-one .col-1 img{
+        width: 1050px; 
+        height: 500px;   
+        margin-top: 30px;
+    }
+
+    .home .slide.slide-one .col-2 h4{
+        font-size: 3rem;
+        margin-top: 5px;
+        margin-left: 2rem;
+    }
+
+    .home .slide.slide-one .col-2 h1{
+        font-size: 2rem; 
+        margin-left: 2rem; 
+    }
+
+}
+
+@media(max-width:1500px){
+    .home .slide.slide-two .col-1 img{
+        width: 1050px;   
+        height: 500px; 
+        margin-top: 30px;
+    }
+
+    .home .slide.slide-two .col-2 h4{
+        font-size: 3rem;
+        margin-top: 5px;
+        margin-left: 2rem;
+    }
+
+    .home .slide.slide-two .col-2 h1{
+        font-size: 2rem;
+        margin-left: 2rem;
+    }
+}
+
+
+@media(max-width:1500px){
+    .home .slide.slide-three .col-1 img{
+        width: 1050px;  
+        height: 500px;
+        margin-top: 30px;
+    }
+
+    .home .slide.slide-three .col-2 h4{
+        font-size: 3rem;
+        margin-top: 5px;
+        margin-left: 2rem;
+    }
+
+    .home .slide.slide-three .col-2 h1{
+        font-size: 2rem;
+        margin-left: 2rem;
+    }
+}
+
+@media(max-width:1250px){
+    .home .slide.slide-one .col-1 img{
+        width: 900px; 
+        height: 450px;  
+        margin-top: 55px; 
+    }
+
+    .home .slide.slide-one .col-2 h4{
+        font-size: 2.75rem;
+        margin-top: 30px;
+    }
+
+    .home .slide.slide-one .col-2 h1{
+        font-size: 1.75rem;  
+    }
+
+}
+
+@media(max-width:1250px){
+    .home .slide.slide-two .col-1 img{
+        width: 900px;   
+        height: 450px;
+        margin-top: 55px;
+    }
+
+    .home .slide.slide-two .col-2 h4{
+        font-size: 2.75rem;
+        margin-top: 30px;
+    }
+
+    .home .slide.slide-two .col-2 h1{
+        font-size: 1.75rem;
+       
+    }
+}
+
+
+@media(max-width:1250px){
+    .home .slide.slide-three .col-1 img{
+        width: 900px;  
+        height: 450px;  
+        margin-top: 55px;
+    }
+
+    .home .slide.slide-three .col-2 h4{
+        font-size: 2.75rem;
+        margin-top: 30px;
+    }
+
+    .home .slide.slide-three .col-2 h1{
+        font-size: 1.75rem;
+    }
+}
+
+@media(max-width:1075px){
+    .home .slide.slide-one .col-1 img{
+        width: 700px; 
+        height: 400px;
+        margin-top: 50px;  
+    }
+
+    .home .slide.slide-one .col-2 h4{
+        font-size: 2.5rem;
+        margin-top: 40px;
+    }
+
+    .home .slide.slide-one .col-2 h1{
+        font-size: 1.5rem;  
+    }
+
+}
+
+@media(max-width:1075px){
+    .home .slide.slide-two .col-1 img{
+        width: 700px;   
+        height: 400px;
+        margin-top: 50px;
+    }
+
+    .home .slide.slide-two .col-2 h4{
+        font-size: 2.5rem;
+        margin-top: 40px;
+    }
+
+    .home .slide.slide-two .col-2 h1{
+        font-size: 1.5rem;
+       
+    }
+}
+
+
+@media(max-width:1075px){
+    .home .slide.slide-three .col-1 img{
+        width: 700px;  
+        height: 400px;  
+        margin-top: 50px;
+    }
+
+    .home .slide.slide-three .col-2 h4{
+        font-size: 2.5rem;
+        margin-top: 40px;
+    }
+
+    .home .slide.slide-three .col-2 h1{
+        font-size: 1.5rem;
+    }
+}
+
+@media(max-width:750px){
+    .home .slide.slide-one .col-1 img{
+        width:600px; 
+        height: 350px;
+        margin-bottom: 30%;
+    }
+
+    .home .slide.slide-one .col-2 h4{
+        font-size: 2.5rem;
+        margin-top: 55px;
+    }
+
+    .home .slide.slide-one .col-2 h1{
+        font-size: 1.5rem;  
+    }
+
+    .home .swiper-button-next{
+        bottom: 730px;
+        left: 93%;
+        position: relative;
+        transition: 0.5s;
+    }
+
+    .home .swiper-button-prev{
+        bottom: 760px;
+        position: relative;
+        transition: 0.5s;
+    }
+
+   
+    
+}
+
+@media(max-width:630px){
+    .home .swiper-button-next{
+        bottom: 730px;
+        left: 90%;
+        position: relative;
+        transition: 0.5s;
+    }
+}
+
+@media(max-width:750px){
+    .home .slide.slide-two .col-1 img{
+        width:600px; 
+        height: 350px;
+        margin-top: 15px;
+    }
+
+    .home .slide.slide-two .col-2 h4{
+        font-size: 2.5rem;
+        margin-top: 55px;
+    }
+
+    .home .slide.slide-two .col-2 h1{
+        font-size: 1.5rem;
+       
+    }
+
+    .box .title h2{
+        font-size: 3rem;
+        color: white;
+        position: relative;
+        display: flex;
+        margin-top: -100px;
+        bottom: 225px;
+        
+        text-transform: capitalize;
+        text-align: center;
+        align-items: center;
+        font-family: Formula1;
+    }
+
+   
+}
+
+@media(max-width:750px){
+    .home .slide.slide-one .col-1 img{
+        width:530px; 
+        height: 330px;
+        margin-top: 15px;
+       
+    }
+
+    .home .slide.slide-one .col-2 h4{
+        font-size: 2.5rem;
+        margin-top: 55px;
+    }
+
+    .home .slide.slide-one .col-2 h1{
+        font-size: 1.5rem;  
+    }
+
+}
+
+@media(max-width:750px){
+    .home .slide.slide-two .col-1 img{
+        width:530px; 
+        height: 330px;
+        margin-top: -130px;
+       
+    }
+
+    .home .slide.slide-two .col-2 h4{
+        font-size: 2.5rem;
+        margin-top: 55px;
+    }
+
+    .home .slide.slide-two .col-2 h1{
+        font-size: 1.5rem;
+       
+    }
+}
+
+
+@media(max-width:750px){
+    .home .slide.slide-three .col-1 img{
+        width:530px; 
+        height: 330px; 
+        margin-top: -130px;
+     
+    }
+
+    .home .slide.slide-three .col-2 h4{
+        font-size: 2.5rem;
+        margin-top: 55px;
+    }
+
+    .home .slide.slide-three .col-2 h1{
+        font-size: 1.5rem;
+    }
+}
+
+@media(max-width:550px){
+    .home .slide.slide-one .col-1 img{
+        width:480px; 
+        height: 300px;
+        margin-top: 15px;
+       
+    }
+
+    .home .slide.slide-one .col-2 h4{
+        font-size: 2.5rem;
+        margin-top: 55px;
+    }
+
+    .home .slide.slide-one .col-2 h1{
+        font-size: 1.5rem;  
+    }
+
+}
+
+@media(max-width:550px){
+    .home .slide.slide-two .col-1 img{
+        width:480px; 
+        height: 300px;
+        margin-top: -130px;
+       
+    }
+
+    .home .slide.slide-two .col-2 h4{
+        font-size: 2.5rem;
+        margin-top: 55px;
+    }
+
+    .home .slide.slide-two .col-2 h1{
+        font-size: 1.5rem;
+       
+    }
+}
+
+
+@media(max-width:550px){
+    .home .slide.slide-three .col-1 img{
+        width:480px; 
+        height: 300px;
+        margin-top: -130px;
+     
+    }
+
+    .home .slide.slide-three .col-2 h4{
+        font-size: 2.5rem;
+        margin-top: 55px;
+    }
+
+    .home .slide.slide-three .col-2 h1{
+        font-size: 1.5rem;
+    }
+}
+
+
+.box .background{
+    
+    bottom: 175px;
+    padding-left: 15%;
+    padding-right: 15%;
+    position: relative;
+    cursor: pointer;
+    
+}
+
+.box .background img{
+    max-height: 50%;
+    width: 100%;
+    background-size: cover;
+    border-radius: 2rem;
+    transition: all 1.1s;
+    box-shadow: 0px 0px 10px 1px grey;
+    cursor: pointer;
+    position: relative;
+}
+
+.box .background:hover img{
+    transform: scale(1.05);
+}
+
+.box .button button{
+    font-size: 3vw;
+    width: 18%;
+    height: 90px;
+    position: relative;
+    bottom: 340px;
+    margin-left: 66%;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.5s ease;
+    color: black;
+    font-family: Formula1;
+
+    
+}
+
+
+.box .button button:hover{
+    transform: scale(1.05);
+}
+
+@media(max-width: 1200px){
+    .box .button button{
+        font-size: 3vw;
+        width: 18%;
+        height: 70px;
+        position: relative;
+        bottom: 300px;
+        margin-left: 66%;
+        border-radius: 8px;
+        cursor: pointer;
+        transition: 0.5s ease;
+        color: black;
+        font-family: Formula1;
+        
+    }
+
+}
+
+
+/*button 2, background 2*/
+.box .background-2 {
+    bottom: 175px;
+    padding-left: 15%;
+    padding-right: 15%;
+    position: relative;
+    cursor: pointer;
+    
+}
+
+.box .background-2 img{
+    max-height: 50%;
+    width: 100%;
+    background-size: cover;
+    border-radius: 2rem;
+    transition: all 1.1s;
+    box-shadow: 0px 0px 10px 1px grey;
+}
+
+.box .background-2:hover img{
+    transform: scale(1.05);
+}
+
+.box .button-2 button{
+    font-size: 3vw;
+    font-weight: 600;
+    width: 18%;
+    height: 90px;
+    position: relative;
+    bottom: 340px;
+    margin-left: 66%;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.5s ease;
+    color: black;
+    font-family: Formula1;
+
+    
+}
+
+
+.box .button-2 button:hover{
+    transform: scale(1.05);
+}
+
+@media(max-width:1200px){
+    .box .button-2 button{
+        font-size: 3vw;
+        width: 18%;
+        height: 70px;
+        position: relative;
+        bottom: 300px;
+        margin-left: 66%;
+        border-radius: 8px;
+        cursor: pointer;
+        transition: 0.5s ease;
+        color: black;
+        font-family: Formula1;
+        
+    }
+}
+
+
+/*button-3, background-3*/
+.box .background-3{
+    bottom: 175px;
+    padding-left: 15%;
+    padding-right: 15%;
+    position: relative;
+    cursor: pointer;
+   
+}
+
+.box .background-3 img{
+    max-height: 50%;
+    width: 100%;
+    background-size: cover;
+    border-radius: 2rem;
+    transition: all 1.1s;
+    box-shadow: 0px 0px 10px 1px grey;
+}
+
+.box .background-3:hover img{
+    transform: scale(1.05);
+}
+
+.box .button-3 button{
+    font-size: 3vw;
+    font-weight: 600;
+    width: 18%;
+    height: 90px;
+    position: relative;
+    bottom: 340px;
+    margin-left: 66%;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.5s ease;
+    color: black;
+    font-family: Formula1;
+
+    
+}
+
+.box .button-3 button:hover{
+    transform: scale(1.05);
+}
+
+@media(max-width:1200px){
+    .box .button-3 button{
+        font-size: 3vw;
+        width: 18%;
+        height: 70px;
+        position: relative;
+        bottom: 300px;
+        margin-left: 66%;
+        border-radius: 8px;
+        cursor: pointer;
+        transition: 0.5s ease;
+        color: black;
+        font-family: Formula1;
+        
+    }
+}
+
+
+/*button-4, background-4*/
+.box .background-4{
+    bottom: 175px;
+    padding-left: 15%;
+    padding-right: 15%;
+    position: relative;
+    cursor: pointer;
+   
+}
+
+.box .background-4 img{
+    max-height: 50%;
+    width: 100%;
+    background-size: cover;
+    border-radius: 2rem;
+    transition: all 1.1s;
+    box-shadow: 0px 0px 10px 1px grey;
+}
+
+.box .background-4:hover img{
+    transform: scale(1.05);
+}
+
+.box .button-4 button{
+    font-size: 3vw;
+    font-weight: 600;
+    width: 18%;
+    height: 90px;
+    position: relative;
+    bottom: 340px;
+    margin-left: 66%;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.5s ease;
+    color: black;
+    font-family: Formula1;
+
+    
+}
+
+.box .button-4 button:hover{
+    transform: scale(1.05);
+}
+
+@media(max-width:1200px){
+    .box .button-4 button{
+        font-size: 3vw;
+        width: 18%;
+        height: 70px;
+        position: relative;
+        bottom: 300px;
+        margin-left: 66%;
+        border-radius: 8px;
+        cursor: pointer;
+        transition: 0.5s ease;
+        color: black;
+        font-family: Formula1;
+        
+    }
+}
+
