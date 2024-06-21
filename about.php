@@ -1,0 +1,213 @@
+<?php
+session_start();
+
+include("php/config.php");
+if(!isset($_SESSION['valid'])) {
+    header("Location: index.php");
+}
+
+?>
+
+<!DOCTYPE html>
+<html lang="en">
+<head> 
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!---- titile -->
+    <title>Motor Custom and Info Network - Create your dream cars</title>
+    <!--- customer css file ----->   
+    <link rel="stylesheet" href="About Us/cssphp/style.css">
+    <!--- boxicon cdn link ----->
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+    <link href="https://blogfonts.com/css/aWQ9MTUxNTEzJnN1Yj01MTMmYz1mJnR0Zj1Gb3JtdWxhMS1Cb2xkX3dlYl8wLnR0ZiZuPWZvcm11bGExLWRpc3BsYXktYm9sZA/Formula1 Display Bold.ttf" rel="stylesheet" type="text/css"/>
+    <title>Remove Bullets</title>
+    <style>
+      body{
+        background-image: url('background.jpg');
+        background-repeat: no-repeat;
+        background-position: center;
+        background-attachment: fixed;
+        background-size: cover;
+      }
+    </style>
+    
+</head>
+<body>
+  
+        <header class="header">
+                <div class="logo">
+                <a href="home.php"><img src="IMG MHP/Project Logo main home.png" alt=""></a>
+                </div>
+            <nav>
+                <div class="navbar">
+                    <ul class="navbarlinks">
+                            <li><a href="hm.php" class="active">Home</a></li>
+                            <li><a href="#">Customize</a></li>
+                            <li><a href="#">Information</a></li>
+                            <li><a href="news.php">News</a></li>
+                            <li><a href="about.php">About us</a></li>
+                    </ul>
+                </div>
+                <div class="others">
+                       
+                        <i class='bx bx-menu-alt-left' id="menuBtn"></i>
+                </div>
+            </nav>    
+            
+            <?php
+
+            
+            $id = $_SESSION['id'];
+            $query = mysqli_query($con,"SELECT*FROM users WHERE Id=$id");
+            
+            while($result = mysqli_fetch_assoc($query)){
+                $res_Uname = $result['Username'];
+                $res_Email = $result['Email'];
+                $res_id = $result['Id'];
+            }
+                echo "<a href='edit.php?Id=$res_id'> <div class='right-links'><div class='pro'>Change Profile</a>";
+                ?>
+
+                <a href="logout.php"> <button class="btn">Log Out</button></a>
+            </div>
+        </header>
+
+
+
+
+          
+            <div class="responsive-container-block bigContainer">
+                <div class="responsive-container-block Container bottomContainer">
+                  <div class="ultimateImg">
+                    <img class="mainImg" src="About Us/imgaboutus/tay.png">
+                    <div class="purpleBox">
+                      <p class="purpleText">
+                        Name: Tay Fu Nian
+                      </p>
+                      <img class="stars" src="About Us/imgaboutus/5-star-rating-review-star-transparent-free-png.webp">
+                    </div>
+                  </div>
+                  <div class="allText bottomText">
+                    <p class="text-blk headingText">
+                      Car Customization Editor
+                    </p>
+                    <p class="text-blk subHeadingText">
+                      To create car customization, we are using the best way for users can be able to customize the car well. We will update the car customization platform all the time and hope that users can use it well.
+                    </p>
+                    <p class="text-blk description">
+                      <span
+                        class="instagram"><ion-icon name="logo-instagram"></ion-icon><u>funiantay</u>
+                      </span>
+                      <span
+                        class="phone"><ion-icon name="call-outline"></ion-icon><u>0125273289</u>
+                      </span>
+                    </p>
+                  </div>
+                </div>
+            </div>
+
+
+            <div class="responsive-container-block bigContainer">
+              <div class="responsive-container-block Container bottomContainer">
+                <div class="ultimateImg">
+                  <img class="mainImg" src="About Us/imgaboutus/iz.png">
+                  <div class="purpleBox">
+                    <p class="purpleText">
+                      Name: Ian Isaac Ong Seong Yean
+                    </p>
+                    <img class="stars" src="About Us/imgaboutus/5-star-rating-review-star-transparent-free-png.webp">
+                  </div>
+                </div>
+                <div class="allText bottomText">
+                  <p class="text-blk headingText">
+                    Car Information Editor
+                  </p>
+                  <p class="text-blk subHeadingText">
+                    To create car information, we have collected all the main information based on every models of car and we also do the car custom showcase and showcase of car introduction and allow users to post the comment.
+                  </p>
+                  <p class="text-blk description">
+                  <span
+                        class="instagram"><ion-icon name="logo-instagram"></ion-icon><u>xiao.redz</u>
+                    </span>
+                    <span
+                        class="phone"><ion-icon name="call-outline"></ion-icon><u>0196385308</u>
+                    </span> 
+                  </p>
+                </div>
+              </div>
+            </div>
+
+
+            <div class="responsive-container-block bigContainer">
+              <div class="responsive-container-block Container bottomContainer">
+                <div class="ultimateImg">
+                  <img class="mainImg" src="About Us/imgaboutus/lik.png">
+                  <div class="purpleBox">
+                    <p class="purpleText">
+                      Name: Cheng Lik Wei
+                    </p>
+                    <img class="stars" src="About Us/imgaboutus/5-star-rating-review-star-transparent-free-png.webp">
+                  </div>
+                </div>
+                <div class="allText bottomText">
+                  <p class="text-blk headingText">
+                    Car Series & Model Editor
+                  </p>
+                  <p class="text-blk subHeadingText">
+                    To create car series and model platform, we have integrated all the information of series and model. Lastly, we selected some famous brands of the series and models to do, hope that it's suitable for users.
+                  </p>
+                  <p class="text-blk description">
+                    <span
+                        class="instagram"><ion-icon name="logo-instagram"></ion-icon><u>dixoncheng77</u>
+                    </span>
+                    <span
+                        class="phone"><ion-icon name="call-outline"></ion-icon><u>0197581929</u>
+                    </span>
+                  </p>
+                </div>
+              </div>
+            </div>
+
+
+            <div class="responsive-container-block bigContainer">
+              <div class="responsive-container-block Container bottomContainer">
+                <div class="ultimateImg">
+                  <img class="mainImg" src="About Us/imgaboutus/yuhen.png">
+                  <div class="purpleBox">
+                    <p class="purpleText">
+                      Name: Chai Yu Hen
+                    </p>
+                    <img class="stars" src="About Us/imgaboutus/5-star-rating-review-star-transparent-free-png.webp">
+                  </div>
+                </div>
+                <div class="allText bottomText">
+                  <p class="text-blk headingText">
+                    Car News Editor
+                  </p>
+                  <p class="text-blk subHeadingText">
+                    To create car news, we have collected a lot of latest news of car such as what will the brands upcoming next year and what brands are going to develop a new car technology, hope that users can see it well.
+                  </p>
+                  <p class="text-blk description">
+                    <span
+                        class="instagram"><ion-icon name="logo-instagram"></ion-icon><u>yuhen0724</u>
+                    </span>
+                    <span
+                        class="phone"><ion-icon name="call-outline"></ion-icon><u>01155202885</u>
+                    </span>
+                  </p>
+                </div>
+              </div>
+            </div>
+
+
+
+
+<!---custom script file -->
+<script src="About Us/javaaboutus/script.js"></script>
+<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+
+</body>
+</html>
